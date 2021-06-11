@@ -1,4 +1,5 @@
-{ stdenv, fetchpatch, fetchurl, libdvdread, intltool, glib, libtool, pkgconfig }:
+{ stdenv, lib, fetchpatch, fetchurl,
+    libdvdread, intltool, glib, libtool, pkgconfig }:
 
 let
   pname = "dvdbackup";
@@ -31,10 +32,10 @@ in stdenv.mkDerivation {
   ];
 
   buildInputs = [
-    libdvdread intltool glib libtool pkgconfig
+    libdvdread  intltool  glib  libtool  pkgconfig
   ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     homepage = "http://${pname}.sourceforge.net/";
     description = "A tool to rip video DVDs from the command line";
     license = licenses.gpl3;
