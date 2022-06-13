@@ -39,7 +39,7 @@ in stdenv.mkDerivation {
     homepage = "http://${pname}.sourceforge.net/";
     description = "A tool to rip video DVDs from the command line";
     license = licenses.gpl3;
-    maintainers = [ "Neil Mayhew <neil_mayhew@users.sourceforge.net" ];
+    maintainers = with maintainers; [ neilmayhew ];
     platforms = platforms.linux;
   };
 }
