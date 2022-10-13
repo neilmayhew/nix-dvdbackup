@@ -1,5 +1,5 @@
 { stdenv, lib, fetchpatch, fetchurl,
-    libdvdread, intltool, glib, libtool, pkgconfig }:
+    libdvdread, intltool, glib, libtool, pkg-config }:
 
 let
   pname = "dvdbackup";
@@ -32,7 +32,7 @@ in stdenv.mkDerivation {
   ];
 
   buildInputs = [
-    libdvdread  intltool  glib  libtool  pkgconfig
+    libdvdread  intltool  glib  libtool  pkg-config
   ];
 
   meta = with lib; {
